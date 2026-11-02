@@ -4,19 +4,19 @@
 <style>body{font-family:system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.7;color:#222}h1{font-size:1.8em}h2{margin-top:2em}</style></head>
 <body>
 <h1>Hermes Sanji Drive</h1>
-<p>Hermes Sanji Drive is a personal, single-user automation connection operated by the account owner (geongeon0422@gmail.com). It lets the owner's private Hermes assistant profile "Sanji" upload the owner's own blog manuscripts and images into one Google Drive folder that the owner explicitly selected.</p>
-<p>Hermes Sanji Drive는 계정 소유자 본인만 사용하는 개인 자동화 연결입니다. 개인 Hermes 비서의 Sanji 프로필이 소유자가 직접 선택한 Google Drive 폴더에 소유자 본인의 블로그 원고와 이미지를 업로드하는 데만 사용합니다.</p>
+<p>Hermes Sanji Drive is a personal, single-user automation connection operated by the account owner (geongeon0422@gmail.com). It lets the owner's private Hermes assistant profile "Sanji" read the owner's blog automation materials (weekly blog statistics, account screenshots, manuscripts) and add new blog manuscripts and images, all inside one Google Drive folder chosen by the owner ("블로그 자동화").</p>
+<p>Hermes Sanji Drive는 계정 소유자 본인만 사용하는 개인 자동화 연결입니다. 개인 Hermes 비서의 Sanji 프로필이 소유자의 '블로그 자동화' 폴더 안에 있는 자료(주간 블로그 통계, 계좌 스크린샷, 원고)를 읽고, 같은 폴더 안에 새 원고와 이미지를 추가하는 데만 사용합니다.</p>
 <p><a href="#privacy">Privacy Policy / 개인정보처리방침</a> · <a href="#terms">Terms of Service / 서비스 약관</a></p>
 
 <h2 id="privacy">Privacy Policy / 개인정보처리방침</h2>
 <ul>
-<li>Scope: only <code>https://www.googleapis.com/auth/drive.file</code>. The app can access only files and folders it created or that the owner explicitly selected with Google Picker. It does not read the rest of Google Drive, Gmail, Calendar, or contacts.</li>
-<li>Use: create date and post folders, upload manuscripts and images, and read back file name, parent folder, size and checksums to verify uploads.</li>
-<li>Storage: OAuth credentials are stored only on the owner's private server with restricted file permissions. Uploaded content stays in the owner's own Google Drive.</li>
-<li>Sharing: data is not sold, shared, or transferred to third parties, and is not used for advertising or to train generalized AI/ML models.</li>
-<li>No deletion, public sharing, or permission changes are performed by this app.</li>
+<li>Scopes: <code>https://www.googleapis.com/auth/drive.readonly</code> (read) and <code>https://www.googleapis.com/auth/drive.file</code> (create new files in folders the owner selected). Google does not offer a folder-limited scope, so the software itself only reads items whose parent chain is inside the owner's "블로그 자동화" folder and refuses everything else.</li>
+<li>Use: read blog statistics, screenshots and manuscripts to suggest topics and write drafts; create new date/post folders and upload new manuscripts and images; read back name, parent, size and checksums to verify uploads.</li>
+<li>The app never modifies, overwrites, deletes, trashes, shares or changes permissions of existing files.</li>
+<li>Storage: OAuth credentials are stored only on the owner's private server with restricted file permissions. Downloaded copies are kept in a private working directory on that server for processing only.</li>
+<li>Sharing: data is not sold, shared, or transferred to third parties, and is not used for advertising or to train generalized AI/ML models. Content may be processed by the AI model provider that runs the owner's private assistant solely to perform the owner's requests.</li>
 <li>Revocation: access can be revoked at any time at <a href="https://myaccount.google.com/permissions">Google Account permissions</a>.</li>
-<li>범위: drive.file 권한만 사용하며, 앱이 만들었거나 소유자가 선택한 파일·폴더에만 접근합니다. 데이터는 제3자에게 판매·공유하지 않고 광고나 AI 모델 학습에 사용하지 않습니다.</li>
+<li>범위: drive.readonly(읽기)와 drive.file(새 파일 추가)을 사용합니다. Google은 폴더 단위 권한을 제공하지 않으므로 프로그램에서 '블로그 자동화' 폴더 밖 항목은 거부합니다. 기존 파일의 수정·삭제·공유는 하지 않으며, 데이터를 제3자에게 판매·공유하거나 광고·AI 모델 학습에 사용하지 않습니다.</li>
 </ul>
 <p>Google API Services usage complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
 
